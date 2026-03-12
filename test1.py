@@ -79,8 +79,7 @@ def script_chay_ngam():
                 
         except Exception as e:
             print(f"Lỗi {e}")
-            
-        sleep(60)
+            sleep(60)
 
 
 threading.Thread(target=script_chay_ngam, daemon=True).start()
@@ -93,6 +92,7 @@ def home():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=10000)
+
 
 
 
