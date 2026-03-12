@@ -79,7 +79,7 @@ def script_chay_ngam():
             
             print("                                \r", end = "")
             if(check == 200):
-                print(f"\033[32mMã pin là : {i}\033[32m")
+                return f"<h1 style='text-align: center; margin-top: 20%; font-family: Arial; color: green'>{check}</h1>"
                 break;
             else:
                 print(f"\033[31mPin {s} sai:))\033[0m")
@@ -100,4 +100,5 @@ def home():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=10000)
+
 
