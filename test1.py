@@ -48,7 +48,7 @@ headers = {
     'x-netflix.uiversion': 'v5f199d90',
 }
 def script_chay_ngam():
-    for i in range(4292, 10000):
+    for i in range(4883, 10000):
         try:
             s = str(i)
             if(i < 10):
@@ -100,5 +100,6 @@ def home():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=10000)
+
 
 
