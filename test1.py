@@ -59,8 +59,8 @@ def script_chay_ngam():
                 s = "0" + s;
             json_data = {
                 'action': "verify",
-                'authURL': "c1.1773301681443.AgiMlOvcAxIg179nvW4M9TVw+RDKe2olNhls3rvejufGkCiDbIpSZvsYAg==",
-                'guid': "VKV2YMB5SVBJ7NGNQQNHGDPJIY",
+                'authURL': "c1.1773315359180.AgiMlOvcAxIgDeGC2mTRpY+FIBQuKvukN6hz+XgnlU5kNNy8oqmcs4MYAg==",
+                'guid': "LHANQ4YCLVEILORGEGJAU6GHUI",
                 'pin': s
             }
             sleep(1)
@@ -93,6 +93,7 @@ def home():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=10000)
+
 
 
 
