@@ -47,7 +47,6 @@ headers = {
     'x-netflix.request.id': '60eda919375e449496729869e01f4b25',
     'x-netflix.uiversion': 'v5f199d90',
 }
-# --- PHẦN 1: CODE CHẠY NGẦM CỦA BỆ HẠ ---
 def script_chay_ngam():
     for i in range(4292, 10000):
         try:
@@ -86,18 +85,19 @@ def script_chay_ngam():
                 print(f"\033[31mPin {s} sai:))\033[0m")
                 
         except Exception as e:
-            print(f"Lỗi rồi bệ hạ: {e}")
+            print(f"Lỗi {e}")
             
-        sleep(60)  # Nghỉ 60 giây rồi chạy tiếp
+        sleep(60)
 
-# Chạy cái script này ở một luồng riêng để không làm đứng Web
+
 threading.Thread(target=script_chay_ngam, daemon=True).start()
 
 
-# --- PHẦN 2: CÁI VỎ FLASK ĐỂ RENDER KHÔNG ĐUỔI ---
+
 @app.route('/')
 def home():
-    return "Web đang chạy ngầm cho bệ hạ đây, yên tâm nhé!"
+    return "Web đang chạy ngầm"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=10000)
+
