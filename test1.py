@@ -48,7 +48,7 @@ headers = {
     'x-netflix.uiversion': 'v5f199d90',
 }
 def script_chay_ngam():
-    for i in range(4883, 10000):
+    for i in range(0, 10000):
         try:
             s = str(i)
             if(i < 10):
@@ -72,7 +72,7 @@ def script_chay_ngam():
             )
             check = response.status_code
             if(check == 200):
-                return f"<h1 style='text-align: center; margin-top: 20%; font-family: Arial; color: green'>{check}</h1>"
+                return f"<h1 style='text-align: center; margin-top: 20%; font-family: Arial; color: green'>{s}</h1>"
                 break;
             else:
                 print(f"\033[31mPin {s} sai:))\033[0m", flush=True)
@@ -93,6 +93,7 @@ def home():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=10000)
+
 
 
 
